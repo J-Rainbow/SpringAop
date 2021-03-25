@@ -8,11 +8,11 @@ import javax.annotation.Resources;
 public class UserDaoImpl implements UserDao {
 
 	public void delete() {
-		System.out.println("删除数据");
+		System.out.println("鍒犻櫎鏁版嵁");
 	}
 
 	public void save() {
-		System.out.println("保存数据");
+		System.out.println("淇濆瓨鏁版嵁");
 	}
 
 }
