@@ -3,8 +3,12 @@
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/src/jsj/hhtc/auto/MyAspect.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/jsj/hhtc/auto/UserDaoImpl.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/jsj/hhtc/cglib/CglibProxy.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/jsj/hhtc/cglib/Test.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/jsj/hhtc/cglib/User.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/jsj/hhtc/jdk/JdkProxy.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/jsj/hhtc/jdk/Test.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/jsj/hhtc/jdk/UserDaoImpl.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/jsj/hhtc/xml/MyAspect.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/jsj/hhtc/xml/UserDaoImpl.java" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
