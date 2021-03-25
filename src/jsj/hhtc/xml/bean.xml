@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd 
+		http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.2.xsd ">
+
+		<!-- 手动配置-->
+		<bean id="userDao" class="jsj.hhtc.xml.UserDaoImpl"></bean>
+		<bean id="myAspect" class="jsj.hhtc.xml.MyAspect"></bean>
+		<aop:config>
+			<aop:aspect ref="myAspect">
+				<aop:pointcut expression="execution(* jsj.hhtc.xml.*.*(..))" id="pointcut"/>
+				<!-- 配置前置通知...-->
+				<aop:before method="myBefore" pointcut-ref="pointcut"></aop:before>
+				<!-- 配置后置通知...-->
+				<aop:after-returning method="myAfterReturning" pointcut-ref="pointcut" returning="retValue"/>
+				<!--配置环绕通知-->
+				<aop:around method="myAround" pointcut-ref="pointcut"></aop:around>
+				<!-- 配置异常通知 throwing="ex" 值，是方法的参数名-->
+				<aop:after-throwing method="myAfterThrowing" pointcut-ref="pointcut" throwing="ex"/>
+				<!--配置最终通知:不管有没有异常，最终通知都会执行-->
+				<aop:after method="myAfter" pointcut-ref="pointcut"/>
+			</aop:aspect>
+		</aop:config>
+</beans>
