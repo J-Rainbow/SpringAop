@@ -3,9 +3,9 @@ package jsj.hhtc.cglib;
 public class User {
 
 	public void say(){
-		System.out.println("正在说话");
+		System.out.println("姝ｅ湪璇磋瘽");
 	}
 	public void run(){
-		System.out.println("正在跑步");
+		System.out.println("姝ｅ湪璺戞");
 	}
 }
