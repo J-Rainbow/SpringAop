@@ -31,7 +31,7 @@ public class MyAspect {
 	//环绕通知
 	@Around("myPointcut()")
 	public Object myAround(ProceedingJoinPoint proceedingJoinPoint) throws Throwable{
-		System.out.println("2.环绕通知。。。开启事务。。"+proceedingJoinPoint.getSignature().getName());
+		System.out.println("2.环绕通知...开启事务.."+proceedingJoinPoint.getSignature().getName());
 		Object retObj = proceedingJoinPoint.proceed();
 		System.out.println("环绕通知提交事务。。。");
 		return retObj;
